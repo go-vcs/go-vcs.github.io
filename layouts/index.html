@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ .Site.Title }} — A light, secure Git forge for people and agents.</title>
-<meta name="description" content="A light, secure Git forge written in Go: repository hosting, a web UI, an administration API and Actions runners. At the design stage.">
+<meta name="description" content="A light, secure Git forge written in Go: repository hosting, a web UI, an administration API and Actions runners. Early: the admin API is built, the rest is design.">
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
 {{ partial "styles.html" . }}
 {{/* The template's own rules for what <main> holds, kept for it alone (class legacy),
@@ -54,7 +54,7 @@
   <div class="panel">
     <h2>What is go-vcs?</h2>
     <p>A Git forge small enough to read and strict enough to trust: repository hosting, a web UI, an administration API over gRPC with FIDO2 on the privileged operations, and Actions runners scheduled through GARM.</p>
-    <p><b>It is at the design stage.</b> The design is written down in <a href="https://github.com/go-vcs/forge/blob/main/docs/design.md">forge/docs/design.md</a>; what is not built yet is not presented here as if it were.</p>
+    <p><b>It is early.</b> The admin gRPC API and its CLI are implemented; hosting, sign-in and the web UI are still design only. The design is written down in <a href="https://github.com/go-vcs/forge/blob/main/docs/design.md">forge/docs/design.md</a>; what is not built yet is not presented here as if it were.</p>
   </div>
   <h2 class="section">Packages</h2>
   <p class="sub">{{ len hugo.Data.pkgs.packages }} module(s) in this organisation.</p>
