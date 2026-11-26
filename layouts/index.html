@@ -55,7 +55,8 @@
     <h2>What is go-vcs?</h2>
     <p>A Git forge small enough to read and strict enough to trust: repository hosting, a web UI, an administration API over gRPC with FIDO2 on the privileged operations, and Actions runners scheduled through GARM.</p>
     <p><b>It is early.</b> The admin gRPC API and its CLI are implemented; hosting, sign-in and the web UI are still design only. The design is written down in <a href="https://github.com/go-vcs/forge/blob/main/docs/design.md">forge/docs/design.md</a>; what is not built yet is not presented here as if it were.</p>
-    <p><b>Agent VCS</b> (design stage, not implemented): an agent-oriented layer on top of git with change ids, CI verdicts bound to the exact commit, server-side merge and path leases, starting with a local daemon over GitHub. <a href="https://go-vcs.github.io/docs/main/agent-vcs/">Read the summary</a>.</p>
+    <p><b>Agent VCS</b> (design stage, not implemented): an agent-oriented layer on top of git with change ids, CI verdicts bound to the exact commit, server-side merge and path leases, starting with a local daemon over GitHub. <a href="https://go-vcs.github.io/docs/main/agent-vcs/">Read the summary</a>.
+    Inspired by Anthropic's <a href="https://www.anthropic.com/engineering/redesigning-source-control">Redesigning source control at Anthropic</a> (2026-10-13), which describes Scion, its internal, unreleased agent-oriented source control; go-vcs is independent and not affiliated with Anthropic. We took server-side reads and writes without a clone, stable change identity, CI-gated server-side merge, path leases, one local daemon and atomic multi-repo changes; not merge-then-fix, Spanner or FUSE checkouts (<a href="https://go-vcs.github.io/docs/main/agent-vcs/#inspiration">details</a>).</p>
   </div>
   <h2 class="section">Packages</h2>
   <p class="sub">{{ len hugo.Data.pkgs.packages }} module(s) in this organisation.</p>
